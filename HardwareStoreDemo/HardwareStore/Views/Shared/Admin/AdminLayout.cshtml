@@ -1,0 +1,84 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
+    <title>@ViewData["Title"] - Ferreteria</title>
+
+    <!-- ========== All CSS files linkup ========= -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/lineicons.css" />
+    <link rel="stylesheet" href="~/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="~/css/main.css" />
+</head>
+<body>
+    <!-- ======== Preloader =========== -->
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+    <!-- ======== Preloader =========== -->
+    <!-- ======== sidebar-nav start =========== -->
+    <partial name="/Views/Shared/Admin/Partials/_SideBar.cshtml" />
+    <div class="overlay"></div>
+    <!-- ======== sidebar-nav end =========== -->
+    <!-- ======== main-wrapper start =========== -->
+    <main class="main-wrapper">
+        <!-- ========== header start ========== -->
+        <partial name="/Views/Shared/Admin/Partials/_Header.cshtml" />
+        <!-- ========== header end ========== -->
+        <!-- ========== section start ========== -->
+        <section class="section">
+            <div class="container-fluid">
+                <!-- ========== title-wrapper start ========== -->
+                <div class="title-wrapper pt-30">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="title">
+                                <h2>Title</h2>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        <div class="col-md-6">
+                            <div class="breadcrumb-wrapper">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item">
+                                            <a href="#0">Dashboard</a>
+                                        </li>
+                                        <li class="breadcrumb-item active" aria-current="page">
+                                            Page
+                                        </li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        @RenderBody()
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- ========== title-wrapper end ========== -->
+            </div>
+            <!-- end container -->
+        </section>
+        
+        <!-- ========== section end ========== -->
+        <!-- ========== footer start =========== -->
+        <partial name="/Views/Shared/Admin/Partials/_Footer.cshtml" />
+        <!-- ========== footer end =========== -->
+    </main>
+    <!-- ======== main-wrapper end =========== -->
+    <!-- ========= All Javascript files linkup ======== -->
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/Chart.min.js"></script>
+    <script src="~/js/dynamic-pie-chart.js"></script>
+    <script src="~/js/moment.min.js"></script>
+    <script src="~/js/fullcalendar.js"></script>
+    <script src="~/js/jvectormap.min.js"></script>
+    <script src="~/js/world-merc.js"></script>
+    <script src="~/js/polyfill.js"></script>
+    <script src="~/js/main.js"></script>
+</body>
+</html>
