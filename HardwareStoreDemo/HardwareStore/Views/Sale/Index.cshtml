@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Sale>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["TitlePage"] = "Listado de Ventas";
+}
+
+<p>
+    <a class="btn btn-sucess" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClientID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmployeeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SaleDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Total)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClientName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmployeeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SaleDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Total)
+            </td>
+            <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning">Detalle</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
