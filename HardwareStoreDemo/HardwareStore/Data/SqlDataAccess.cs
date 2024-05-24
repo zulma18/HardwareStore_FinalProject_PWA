@@ -38,5 +38,21 @@ namespace HardwareStore.Data
                 parameters,
                 commandType: CommandType.StoredProcedure);
         }
+
+        // metodo para guardar las ventas y los detalles de venta
+        public async Task<int> SaveDataWithReturnAsync<T>(
+        string storedProcedure,
+        T parameters,
+        string connection = "default")
+        {
+            using IDbConnection dbConnection = new SqlConnection(_configuration.GetConnectionString(connection));
+
+            var p = new DynamicParameters(parameters);
+            p.Add("SaleID", DbType.Int32, direction: ParameterDirection.Output);
+
+            await dbConnection.ExecuteAsync(storedProcedure, p, commandType: CommandType.StoredProcedure);
+
+            return p.Get<int>("SaleID"); // retorna el id de la ultima venta registrada
+        }
     }
 }
