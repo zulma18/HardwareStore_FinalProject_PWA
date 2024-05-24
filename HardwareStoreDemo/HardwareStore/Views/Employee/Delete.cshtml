@@ -1,0 +1,63 @@
+﻿@model HardwareStore.Models.Employee
+
+@{
+    ViewData["Title"] = "Delete";
+    ViewData["TitlePage"] = "Eliminar Empleado";
+}
+
+<section class="bg-white py-3 px-4 container rounded-2" style="max-width:800px;">
+    <h3>¿Estas seguro de Eliminar este empleado?</h3>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Salary)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Salary)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.City)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <button type="submit" class="btn btn-danger">Eliminar <i class="lni lni-trash-can"></i></button>
+            <a class="btn btn-primary" asp-action="Index">Volver a la lista <i class="lni lni-arrow-left"></i></a>
+        </form>
+    </div>
+</section>
+
