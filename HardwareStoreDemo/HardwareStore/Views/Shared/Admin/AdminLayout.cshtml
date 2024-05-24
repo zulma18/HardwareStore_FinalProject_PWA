@@ -12,7 +12,12 @@
     <link rel="stylesheet" href="~/css/lineicons.css" />
     <link rel="stylesheet" href="~/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="~/css/main.css" />
+    <!-- SELECT 2 -->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- DATATABLE -->
+    <link href="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-2.0.7/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/r-3.0.2/datatables.min.css" rel="stylesheet">
+    <!-- TOASTIFY -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <!-- ======== Preloader =========== -->
@@ -46,10 +51,10 @@
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item">
-                                            <a href="#0">Dashboard</a>
+                                            <a asp-action="Index" asp-controller="Home">Dashboard</a>
                                         </li>
                                         <li class="breadcrumb-item active" aria-current="page">
-                                            Page
+                                            @ViewData["TitlePage"]
                                         </li>
                                     </ol>
                                 </nav>
@@ -83,8 +88,18 @@
     <script src="~/js/main.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 
+    <!-- SELECT 2 -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/i18n/es.js"></script>
+
+    <!-- DATA TABLE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/v/dt/jszip-3.10.1/dt-2.0.7/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/r-3.0.2/datatables.min.js"></script>
+    
+    <!-- TOASTIFY JS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
