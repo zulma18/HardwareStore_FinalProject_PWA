@@ -1,375 +1,375 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HardwareStore.bundle.scp.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HardwareStore.bundle.scp.css",
       "PackagePath": "staticwebassets\\HardwareStore.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\lineicons.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\lineicons.css",
       "PackagePath": "staticwebassets\\css\\lineicons.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\main.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\materialdesignicons.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\materialdesignicons.min.css",
       "PackagePath": "staticwebassets\\css\\materialdesignicons.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.eot",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.eot",
       "PackagePath": "staticwebassets\\fonts\\lineicons.eot"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.svg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.svg",
       "PackagePath": "staticwebassets\\fonts\\lineicons.svg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.ttf",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.ttf",
       "PackagePath": "staticwebassets\\fonts\\lineicons.ttf"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.woff",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.woff",
       "PackagePath": "staticwebassets\\fonts\\lineicons.woff"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.woff2",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\lineicons.woff2",
       "PackagePath": "staticwebassets\\fonts\\lineicons.woff2"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.eot",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.eot",
       "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.eot"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.ttf",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.ttf",
       "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.ttf"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.woff",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.woff",
       "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.woff"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.woff2",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\fonts\\materialdesignicons-webfont.woff2",
       "PackagePath": "staticwebassets\\fonts\\materialdesignicons-webfont.woff2"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\favicon.svg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\favicon.svg",
       "PackagePath": "staticwebassets\\images\\favicon.svg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo-2.svg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo-2.svg",
       "PackagePath": "staticwebassets\\images\\logo\\logo-2.svg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo-icon-big.svg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo-icon-big.svg",
       "PackagePath": "staticwebassets\\images\\logo\\logo-icon-big.svg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo-white.svg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo-white.svg",
       "PackagePath": "staticwebassets\\images\\logo\\logo-white.svg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo.svg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\logo\\logo.svg",
       "PackagePath": "staticwebassets\\images\\logo\\logo.svg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile-1.png",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile-1.png",
       "PackagePath": "staticwebassets\\images\\profile\\profile-1.png"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile-cover.jpg",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile-cover.jpg",
       "PackagePath": "staticwebassets\\images\\profile\\profile-cover.jpg"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile-image.png",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile-image.png",
       "PackagePath": "staticwebassets\\images\\profile\\profile-image.png"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile.png",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\images\\profile\\profile.png",
       "PackagePath": "staticwebassets\\images\\profile\\profile.png"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\Chart.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\Chart.min.js",
       "PackagePath": "staticwebassets\\js\\Chart.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\dynamic-pie-chart.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\dynamic-pie-chart.js",
       "PackagePath": "staticwebassets\\js\\dynamic-pie-chart.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\fullcalendar.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\fullcalendar.js",
       "PackagePath": "staticwebassets\\js\\fullcalendar.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\jvectormap.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\jvectormap.min.js",
       "PackagePath": "staticwebassets\\js\\jvectormap.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\loading-bar.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\loading-bar.min.js",
       "PackagePath": "staticwebassets\\js\\loading-bar.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\main.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\moment.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\moment.min.js",
       "PackagePath": "staticwebassets\\js\\moment.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\polyfill.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\polyfill.js",
       "PackagePath": "staticwebassets\\js\\polyfill.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\world-merc.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\js\\world-merc.js",
       "PackagePath": "staticwebassets\\js\\world-merc.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\CDS2\\Desktop\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\kevin\\OneDrive\\Escritorio\\Nueva carpeta (2)\\HardwareStore_FinalProject_PWA\\HardwareStoreDemo\\HardwareStore\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

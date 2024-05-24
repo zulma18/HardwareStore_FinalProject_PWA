@@ -9,55 +9,67 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HardwareStore
 build_property.RootNamespace = HardwareStore
-build_property.ProjectDir = C:\Users\CDS2\Desktop\HardwareStoreDemo\HardwareStore\
+build_property.ProjectDir = C:\Users\kevin\OneDrive\Escritorio\Nueva carpeta (3)\HardwareStore_FinalProject_PWA\HardwareStoreDemo\HardwareStore\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\CDS2\Desktop\HardwareStoreDemo\HardwareStore
+build_property.MSBuildProjectDirectory = C:\Users\kevin\OneDrive\Escritorio\Nueva carpeta (3)\HardwareStore_FinalProject_PWA\HardwareStoreDemo\HardwareStore
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Home/Index.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Home/Privacy.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/AdminLayout.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Sale/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Sale/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Sale/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FsZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXEFkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/Partials/_Footer.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/Partials/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXFBhcnRpYWxzXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/Partials/_Header.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/Partials/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXFBhcnRpYWxzXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/Partials/_SideBar.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/Admin/Partials/_SideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluXFBhcnRpYWxzXF9TaWRlQmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/Error.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/_ViewImports.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/_ViewStart.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CDS2/Desktop/HardwareStoreDemo/HardwareStore/Views/Shared/_Layout.cshtml]
+[C:/Users/kevin/OneDrive/Escritorio/Nueva carpeta (3)/HardwareStore_FinalProject_PWA/HardwareStoreDemo/HardwareStore/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rcq7vjfufd

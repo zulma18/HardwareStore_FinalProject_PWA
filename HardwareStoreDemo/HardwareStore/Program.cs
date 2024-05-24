@@ -1,7 +1,14 @@
+using HardwareStore.Data;
+using HardwareStore.Repositories.Sales;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
+
+builder.Services.AddScoped<ISaleRepository, SaleRepository>();
 
 var app = builder.Build();
 

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="~/css/lineicons.css" />
     <link rel="stylesheet" href="~/css/materialdesignicons.min.css" />
     <link rel="stylesheet" href="~/css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
     <!-- ======== Preloader =========== -->
@@ -36,7 +37,7 @@
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <div class="title">
-                                <h2>Title</h2>
+                                <h2>@ViewData["TitlePage"]</h2>
                             </div>
                         </div>
                         <!-- end col -->
@@ -80,5 +81,10 @@
     <script src="~/js/world-merc.js"></script>
     <script src="~/js/polyfill.js"></script>
     <script src="~/js/main.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/i18n/es.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
