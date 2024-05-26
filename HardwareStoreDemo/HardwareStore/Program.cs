@@ -15,6 +15,7 @@ builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 
 // validations
 builder.Services.AddScoped<IValidator<Employee>, EmployeeValidator>();
+builder.Services.AddScoped<IValidator<Sale>, SaleValidator>();
 
 // repositories
 builder.Services.AddScoped<ISaleRepository, SaleRepository>();
