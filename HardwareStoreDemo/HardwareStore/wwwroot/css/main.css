@@ -51,16 +51,8 @@ a {
   transition: all 0.3s ease-out 0s;
 }
 
-a,
-a:focus,
-a:hover {
-  text-decoration: none;
-}
-
-i,
-span,
 a {
-  display: inline-block;
+  text-decoration: none;
 }
 
 audio,
@@ -102,6 +94,20 @@ p {
   width: 100%;
   height: 100%;
 }
+
+
+.form-group{
+  margin-top: 15px;
+}
+
+button i {
+  transform:  translateY(2.5px);
+}
+
+table thead tr {
+  text-align: center;
+}
+
 
 .para-width-500 {
   max-width: 500px;
