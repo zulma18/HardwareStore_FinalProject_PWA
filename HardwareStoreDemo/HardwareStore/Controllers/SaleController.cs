@@ -1,5 +1,8 @@
-﻿using HardwareStore.Models;
+﻿using FluentValidation;
+using FluentValidation.Results;
+using HardwareStore.Models;
 using HardwareStore.Repositories.Sales;
+using HardwareStore.Validations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -8,14 +11,16 @@ namespace HardwareStore.Controllers
     public class SaleController : Controller
     {
         private readonly ISaleRepository _saleRepository;
+        private readonly IValidator<Sale> _validator;
         private SelectList _productsList;
         private SelectList _clientsList;
         private SelectList _employeesList;
 
-        public SaleController(ISaleRepository saleRepository)
+        public SaleController(ISaleRepository saleRepository, IValidator<Sale> validator)
         {
             _saleRepository = saleRepository;
-
+            
+            _validator = validator;
         }
 
         // GET: SaleController
@@ -65,8 +70,18 @@ namespace HardwareStore.Controllers
         // GET: SaleController/Create
         public async Task<ActionResult> Create()
         {
+            
+            var sale = new Sale
+            {
+                SaleDetails = new List<SaleDetail>()
+            };
+
             var products = await _saleRepository.GetAllProductsAsync();
-            ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
+            ViewBag.Products = products.Select(p => new SelectListItem
+            {
+                Value = p.Id.ToString(),
+                Text = p.ProductName
+            }).ToList();
 
 
             var clients = await _saleRepository.GetAllClientsAsync();
@@ -81,7 +96,7 @@ namespace HardwareStore.Controllers
 
             ViewBag.Clients = _clientsList;
             ViewBag.Employees = _employeesList;
-            return View();
+            return View(sale);
         }
 
 
@@ -94,6 +109,27 @@ namespace HardwareStore.Controllers
             {
                 if (sale.SaleDetails == null)
                 {
+                    TempData["message"] = "Debe Agregar Almenos 1 Producto";
+
+                    var products = await _saleRepository.GetAllProductsAsync();
+                    ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
+
+                    var clients = await _saleRepository.GetAllClientsAsync();
+                    ViewBag.Clients = new SelectList(clients, nameof(Client.Id), nameof(Client.ClientName));
+
+                    var employees = await _saleRepository.GetAllEmployeesAsync();
+                    ViewBag.Employees = new SelectList(employees, nameof(Employee.Id), nameof(Employee.EmployeeName));
+
+                    return View(sale);
+                }
+
+                ValidationResult validationResult =
+                    await _validator.ValidateAsync(sale);
+
+                if (!validationResult.IsValid)
+                {
+                    validationResult.AddToModelState(this.ModelState);
+
                     var products = await _saleRepository.GetAllProductsAsync();
                     ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
 
@@ -107,6 +143,8 @@ namespace HardwareStore.Controllers
                 }
 
                 await _saleRepository.AddAsync(sale);
+
+                TempData["addSale"] = "Se registro la venta correctamente";
 
                 return RedirectToAction(nameof(Index));
             }
