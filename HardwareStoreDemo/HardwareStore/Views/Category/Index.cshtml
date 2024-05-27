@@ -1,0 +1,167 @@
+﻿@model IEnumerable<HardwareStore.Models.Category>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["TitlePage"] = "Listado de Categorias";
+}
+
+<section class="bg-white container p-4 rounded-2 ">
+    <div class="d-flex justify-content-end mx-5">
+        <a class="btn btn-success mb-2" asp-action="Create" asp-controller="Category">Agregar Categoria <i class="lni lni-add-files"></i></a>
+    </div>
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <table class="table table-reponsive table-bordered table-striped mt-2 w-100" id="categoryTable">
+        <thead class="text-center bg-secondary text-white">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td class="text-center">
+                        <a asp-controller="Category"
+                           asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-warning">
+                            <i class="lni lni-pencil-alt"></i>
+                        </a>
+                        <a asp-controller="Category"
+                           asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           class="btn btn-danger">
+                            <i class="lni lni-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+</section>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#categoryTable").DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                },
+                dom: "Bfrtip",
+                buttons: [
+                    {
+                        extend: 'csv',
+                        className: 'bg-info border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2]
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'bg-danger border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2]
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        className: 'bg-success border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2]
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        target: 3,
+                        orderable: false,
+                        searchable: false
+                    }
+                ]
+            })
+        })
+    </script>
+
+    <!-- funcion para mostar los alert -->
+    <script>
+        function showToast(message, gradientColors) {
+            Toastify({
+                text: message,
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, " + gradientColors + ")"
+                }
+            }).showToast();
+        }
+    </script>
+
+    @if (TempData["addCategory"] != null)
+    {
+        <script>
+            showToast("Se agrego correctamente la Categoria", "#6ED725, #274412");
+        </script>
+    }
+
+    @if (TempData["editCategory"] != null)
+    {
+        <script>
+            showToast("Se edito correctamente la Categoria", "#00b09b, #96c93d");
+        </script>
+    }
+
+    @if (TempData["deleteCategory"] != null)
+    {
+        <script>
+            showToast("Se Elimino correctamente la Categoria", "#ff5500, #ff0000");
+        </script>
+    }
+
+
+}
