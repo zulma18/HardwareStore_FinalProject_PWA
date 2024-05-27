@@ -87,6 +87,7 @@
                                             }
                                         }
                                     </select>
+                                    <input type="text" name="SaleDetails[@i].ProductName" class="form-control d-none" />
                                 </td>
                                 <td style="width:15%;"><input type="number" name="SaleDetails[@i].Quantity" class="form-control text-center" value="@saleDetailsList[i].Quantity" required /></td>
                                 <td class="text-center">
@@ -208,6 +209,7 @@
                                                     <option value="@product.Value">@product.Text</option>
                                                 }
                                       </select>
+                                      <input type="text" name="SaleDetails[${index}].ProductName" class="form-control d-none" />
                                  </td>
                                  <td style="width:15%;"><input type="number" name="SaleDetails[${index}].Quantity" class="form-control text-center" value="1" required /></td>
                                  <td class="text-center">
@@ -219,7 +221,7 @@
                                  </td>
                                  <td class="text-center">$ <span class="totalDetail">0</span></td>
                                  <td class="text-center">
-                                                      <button type="button" class="btn btn-success"><i class="lni lni-checkmark"></i></button>
+                                              <button type="button" class="btn btn-success"><i class="lni lni-checkmark"></i></button>
                                               <button type="button" class="btn btn-danger remove-row"><i class="lni lni-trash-can"></i></button>
                                  </td>
                             </tr>`;
@@ -247,6 +249,7 @@
             $('#details-table').on('change', 'input[name$=".Quantity"]', function () {
                 var $row = $(this).closest('tr');
                 var cantidad = parseFloat($row.find('input[name$=".Quantity"]').val()) || 0;
+                var total  = parseFloat($row.find('.productPrice').text() * cantidad)
                 var stock = parseFloat($row.find('.productStock').text()) || 0;
                 $row.find('.totalDetail').text(total.toFixed(2));
                 checkQuantity($row, cantidad, stock);
@@ -280,6 +283,7 @@
                         success: function (data) {
                             if (data) {
                                 $row.find('.productPrice').text(data.unitPrice);
+                                $row.find('input[name$=".ProductName"]').val(data.productName); // input oculo guarda el nombre del producto para el enviode email
                                 $row.find('.productStock').text(data.unitsInStock);
                                 $row.find('input[name$=".Stock"]').val(data.unitsInStock); // input ocultos que sirven solo para mostrar la informacion
                                 $row.find('input[name$=".UnitPrice"]').val(data.unitPrice); // en la vista en caso de un error en el modelo Sale
