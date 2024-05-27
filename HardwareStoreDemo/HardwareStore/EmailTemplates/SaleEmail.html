@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333333;
+        }
+
+        h2 {
+            padding: 0;
+            margin-top: 10px;
+            margin-bottom: 0;
+            color: #555555;
+        }
+
+        p {
+            color: #666666;
+            line-height: 1.6;
+        }
+
+        .saleDetailContainer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+            .button:hover {
+                background-color: #0056b3;
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+            table thead {
+                background-color: #333;
+                color: #ffffff;
+            }
+
+                table thead th {
+                    padding: 10px;
+                }
+
+            table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+            table tbody td {
+                padding: 10px;
+                text-align: center;
+            }
+
+            table tbody tr:last-child {
+                border-bottom: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias por tu compra!</h1>
+        <p>Tu compra se procesó con éxito.</p>
+
+        <h2>Información de Cliente</h2>
+        <p><strong>Nombre:</strong> @CustomerName</p>
+        <p><strong>Email:</strong> @Email</p>
+        <p><strong>Dirección de Envío:</strong> @Address , @City </p>
+
+
+        <h2>Detalles de su Compra</h2>
+        <div class="saleDetailContainer">
+            <p><strong>Fecha de Compra:</strong> @SaleDate</p>
+            <p><strong>Total:</strong>$ @Total</p>
+
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                        <th>Cantidad</th>
+                        <th>Sub Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @DetailRows
+                </tbody>
+            </table>
+        </div>
+
+        <p>Si tienes alguna pregunta sobre tu compra, no dudes en ponerte en contacto con nosotros.</p>
+        <a href="#" class="button">Contactar</a>
+
+        <p>¡Gracias por elegirnos!</p>
+
+    </div>
+</body>
+</html>

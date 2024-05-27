@@ -64,6 +64,24 @@ namespace HardwareStore.Repositories.Sales
                 );
         }
 
+        public async Task<Client?> GetClientByIdAsync(int id)
+        {
+            try
+            {
+                var client = await _dataAccess.GetDataAsync<Client, dynamic>(
+                    "dbo.spClient_GetById",
+                    new { Id = id }
+                );
+
+                return client.FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+        }
+
         public async Task<IEnumerable<Employee>> GetAllEmployeesAsync()
         {
             return await _dataAccess.GetDataAsync<Employee, dynamic>(

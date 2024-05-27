@@ -9,6 +9,7 @@ namespace HardwareStore.Repositories.Sales
         Task<IEnumerable<Client>> GetAllClientsAsync();
         Task<IEnumerable<Employee>> GetAllEmployeesAsync();
         Task<IEnumerable<Product>> GetAllProductsAsync();
+        Task<Client?> GetClientByIdAsync(int id);
         Task<Product?> GetProductByIdAsync(int id);
         Task<Sale?> GetSaleByIdAsync(int id);
         Task<IEnumerable<SaleDetail?>> GetSaleDetailsByIdAsync(int id);

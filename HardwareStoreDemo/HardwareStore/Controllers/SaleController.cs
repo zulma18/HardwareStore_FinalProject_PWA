@@ -2,6 +2,7 @@
 using FluentValidation.Results;
 using HardwareStore.Models;
 using HardwareStore.Repositories.Sales;
+using HardwareStore.Services.Email;
 using HardwareStore.Validations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -12,15 +13,16 @@ namespace HardwareStore.Controllers
     {
         private readonly ISaleRepository _saleRepository;
         private readonly IValidator<Sale> _validator;
-        private SelectList _productsList;
-        private SelectList _clientsList;
-        private SelectList _employeesList;
 
-        public SaleController(ISaleRepository saleRepository, IValidator<Sale> validator)
+        private readonly IEmailService _emailService;
+
+        public SaleController(ISaleRepository saleRepository, IValidator<Sale> validator, IEmailService emailService)
         {
             _saleRepository = saleRepository;
-            
+
             _validator = validator;
+
+            _emailService = emailService;
         }
 
         // GET: SaleController
@@ -70,32 +72,13 @@ namespace HardwareStore.Controllers
         // GET: SaleController/Create
         public async Task<ActionResult> Create()
         {
-            
+            await ViewBagLists();
+
             var sale = new Sale
             {
                 SaleDetails = new List<SaleDetail>()
             };
 
-            var products = await _saleRepository.GetAllProductsAsync();
-            ViewBag.Products = products.Select(p => new SelectListItem
-            {
-                Value = p.Id.ToString(),
-                Text = p.ProductName
-            }).ToList();
-
-
-            var clients = await _saleRepository.GetAllClientsAsync();
-            _clientsList = new SelectList(clients,
-                                                nameof(Client.Id),
-                                                nameof(Client.ClientName));
-
-            var employees = await _saleRepository.GetAllEmployeesAsync();
-            _employeesList = new SelectList(employees,
-                                                nameof(Employee.Id),
-                                                nameof(Employee.EmployeeName));
-
-            ViewBag.Clients = _clientsList;
-            ViewBag.Employees = _employeesList;
             return View(sale);
         }
 
@@ -111,14 +94,7 @@ namespace HardwareStore.Controllers
                 {
                     TempData["message"] = "Debe Agregar Almenos 1 Producto";
 
-                    var products = await _saleRepository.GetAllProductsAsync();
-                    ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
-
-                    var clients = await _saleRepository.GetAllClientsAsync();
-                    ViewBag.Clients = new SelectList(clients, nameof(Client.Id), nameof(Client.ClientName));
-
-                    var employees = await _saleRepository.GetAllEmployeesAsync();
-                    ViewBag.Employees = new SelectList(employees, nameof(Employee.Id), nameof(Employee.EmployeeName));
+                    await ViewBagLists();
 
                     return View(sale);
                 }
@@ -130,38 +106,49 @@ namespace HardwareStore.Controllers
                 {
                     validationResult.AddToModelState(this.ModelState);
 
-                    var products = await _saleRepository.GetAllProductsAsync();
-                    ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
-
-                    var clients = await _saleRepository.GetAllClientsAsync();
-                    ViewBag.Clients = new SelectList(clients, nameof(Client.Id), nameof(Client.ClientName));
-
-                    var employees = await _saleRepository.GetAllEmployeesAsync();
-                    ViewBag.Employees = new SelectList(employees, nameof(Employee.Id), nameof(Employee.EmployeeName));
+                    await ViewBagLists();
 
                     return View(sale);
                 }
 
                 await _saleRepository.AddAsync(sale);
 
+                var client = await _saleRepository.GetClientByIdAsync(sale.ClientID);
+
+                Dictionary<string, string> data = new Dictionary<string, string>
+                {
+                    { "Subject", "Factura de Compra" },
+                    { "RecepientName",(client.FirstName + ' ' + client.LastName).ToString() },
+                    { "EmailTo", client.Email },
+                    { "Address", client.Address  },
+                    { "City", client.City }
+                };
+
+                _emailService.SendEmail(data, sale.SaleDetails.ToList());
+
                 TempData["addSale"] = "Se registro la venta correctamente";
 
                 return RedirectToAction(nameof(Index));
+
             }
             catch
             {
-                // En caso de error, recargar las listas desplegables
-                var products = await _saleRepository.GetAllProductsAsync();
-                ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
-
-                var clients = await _saleRepository.GetAllClientsAsync();
-                ViewBag.Clients = new SelectList(clients, nameof(Client.Id), nameof(Client.ClientName));
-
-                var employees = await _saleRepository.GetAllEmployeesAsync();
-                ViewBag.Employees = new SelectList(employees, nameof(Employee.Id), nameof(Employee.EmployeeName));
+                await ViewBagLists();
 
                 return View(sale);
             }
+        }
+
+        private async Task ViewBagLists()
+        {
+            var products = await _saleRepository.GetAllProductsAsync();
+            ViewBag.Products = new SelectList(products, nameof(Product.Id), nameof(Product.ProductName));
+
+            var clients = await _saleRepository.GetAllClientsAsync();
+            ViewBag.Clients = new SelectList(clients, nameof(Client.Id), nameof(Client.ClientName));
+
+            var employees = await _saleRepository.GetAllEmployeesAsync();
+            ViewBag.Employees = new SelectList(employees, nameof(Employee.Id), nameof(Employee.EmployeeName));
         }
 
     }

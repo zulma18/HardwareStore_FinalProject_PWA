@@ -4,6 +4,7 @@ using HardwareStore.Models;
 using HardwareStore.Repositories.Categorys;
 using HardwareStore.Repositories.Employees;
 using HardwareStore.Repositories.Sales;
+using HardwareStore.Services.Email;
 using HardwareStore.Validations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,6 +26,9 @@ builder.Services.AddScoped<ISaleRepository, SaleRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 //builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+// services
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 
 var app = builder.Build();
