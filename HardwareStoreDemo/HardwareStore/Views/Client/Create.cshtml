@@ -1,0 +1,53 @@
+﻿@model HardwareStore.Models.Client
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["TitlePage"] = "Agregar Cliente";
+}
+
+<section class="bg-white py-3 px-4 container rounded-2" style="max-width:800px;">
+    <h4 class="pt-2">Ingrese los datos del Cliente</h4>
+    <hr />
+    <div class="row px-md-3">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="FirstName" class="control-label"></label><b class="text-danger"> *</b>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LastName" class="control-label"></label><b class="text-danger"> *</b>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label><b class="text-danger"> *</b>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" class="control-label"></label><b class="text-danger"> *</b>
+                    <input asp-for="Phone" class="form-control" />
+                    <span asp-validation-for="Phone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Address" class="control-label"></label><b class="text-danger"> *</b>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="City" class="control-label"></label><b class="text-danger"> *</b>
+                    <input asp-for="City" class="form-control" />
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Guardar <i class="lni lni-save"></i></button>
+                    <a class="btn btn-primary" asp-action="Index">Volver a la lista <i class="lni lni-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+

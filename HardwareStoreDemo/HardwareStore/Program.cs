@@ -2,6 +2,7 @@ using FluentValidation;
 using HardwareStore.Data;
 using HardwareStore.Models;
 using HardwareStore.Repositories.Categorys;
+using HardwareStore.Repositories.Client;
 using HardwareStore.Repositories.Employees;
 using HardwareStore.Repositories.Sales;
 using HardwareStore.Services.Email;
@@ -19,10 +20,13 @@ builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
 builder.Services.AddScoped<IValidator<Employee>, EmployeeValidator>();
 builder.Services.AddScoped<IValidator<Sale>, SaleValidator>();
 builder.Services.AddScoped<IValidator<Category>, CategoryValidator>();
+builder.Services.AddScoped<IValidator<Client>, ClientValidator>();
+
 //builder.Services.AddScoped<IValidator<Product>, ProductValidator>();
 
 // repositories
 builder.Services.AddScoped<ISaleRepository, SaleRepository>();
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 //builder.Services.AddScoped<IProductRepository, ProductRepository>();
