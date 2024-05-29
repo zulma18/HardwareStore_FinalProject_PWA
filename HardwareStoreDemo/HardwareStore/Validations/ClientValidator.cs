@@ -16,15 +16,15 @@ namespace HardwareStore.Validations
                 .NotNull().WithMessage("El apellido es requerido");
 
             RuleFor(client => client.Email)
-                .MaximumLength(20).WithMessage("El numero de caracteres debe estar entre 50")
+                .MaximumLength(50).WithMessage("El numero de caracteres debe estar entre 50")
                 .NotNull().WithMessage("El correo es requerido");
 
             RuleFor(client => client.Phone)
-                .MaximumLength(50).WithMessage("El numero maximo de caracteres es 20")
+                .MaximumLength(20).WithMessage("El numero maximo de caracteres es 20")
                 .NotNull().WithMessage("El telefono es requerido");
 
             RuleFor(client => client.Address)
-                .Length(3, 50).WithMessage("El numero de caracteres debe estar entre 3 y 50")
+                .Length(3, 250).WithMessage("El numero de caracteres debe estar entre 3 y 50")
                 .NotNull().WithMessage("La direccion es requerida");
 
             RuleFor(client => client.City)

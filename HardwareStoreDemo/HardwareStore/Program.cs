@@ -2,7 +2,7 @@ using FluentValidation;
 using HardwareStore.Data;
 using HardwareStore.Models;
 using HardwareStore.Repositories.Categorys;
-using HardwareStore.Repositories.Client;
+using HardwareStore.Repositories.Clients;
 using HardwareStore.Repositories.Employees;
 using HardwareStore.Repositories.Sales;
 using HardwareStore.Services.Email;
