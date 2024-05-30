@@ -1,0 +1,55 @@
+﻿@model HardwareStore.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+    ViewData["TitlePage"] = "Eliminar Producto";
+}
+
+<section class="bg-white py-3 px-4 container rounded-2" style="max-width:1000px;">
+    <h3>¿Estas seguro de Eliminar este producto?</h3>
+    <div>
+        <hr />
+        <dl class="row">
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ProductName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ProductName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CategoryName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CategoryName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SupplierName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SupplierName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UnitPrice)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UnitPrice)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.UnitsInStock)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.UnitsInStock)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <button type="submit" class="btn btn-danger">Eliminar <i class="lni lni-trash-can"></i></button>
+            <a class="btn btn-primary" asp-action="Index">Volver a la lista <i class="lni lni-arrow-left"></i></a>
+        </form>
+    </div>
+
+</section>
+
+
+

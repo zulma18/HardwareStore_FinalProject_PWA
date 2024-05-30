@@ -4,6 +4,7 @@ using HardwareStore.Models;
 using HardwareStore.Repositories.Categorys;
 using HardwareStore.Repositories.Clients;
 using HardwareStore.Repositories.Employees;
+using HardwareStore.Repositories.Products;
 using HardwareStore.Repositories.Sales;
 using HardwareStore.Services.Email;
 using HardwareStore.Validations;
@@ -21,16 +22,15 @@ builder.Services.AddScoped<IValidator<Employee>, EmployeeValidator>();
 builder.Services.AddScoped<IValidator<Sale>, SaleValidator>();
 builder.Services.AddScoped<IValidator<Category>, CategoryValidator>();
 builder.Services.AddScoped<IValidator<Client>, ClientValidator>();
+builder.Services.AddScoped<IValidator<Product>, ProductValidator>();
 
-//builder.Services.AddScoped<IValidator<Product>, ProductValidator>();
 
 // repositories
 builder.Services.AddScoped<ISaleRepository, SaleRepository>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-//builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
 // services
 builder.Services.AddScoped<IEmailService, EmailService>();
 

@@ -1,0 +1,184 @@
+﻿@model IEnumerable<HardwareStore.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["TitlePage"] = "Lista de Productos";
+
+}
+
+<section class="bg-white container p-4 rounded-2 ">
+    <div class="d-flex justify-content-end mx-5">
+        <a class="btn btn-success mb-2" asp-action="Create" asp-controller="Product">Agregar Producto <i class="lni lni-add-files"></i></a>
+    </div>
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <table class="table table-reponsive table-bordered table-striped mt-2 w-100" id="productTable">
+        <thead class="text-center bg-secondary text-white">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    Categoria
+                </th>
+                <th>
+                    Proveedor
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitPrice)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UnitsInStock)
+                </th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SupplierName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitPrice)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UnitsInStock)
+                    </td>
+                    <td class="text-center">
+                        <a asp-controller="Product"
+                           asp-action="Edit"
+                           asp-route-id="@item.Id"
+                           class="btn btn-warning">
+                            <i class="lni lni-pencil-alt"></i>
+                        </a>
+                        <a asp-controller="Product"
+                           asp-action="Delete"
+                           asp-route-id="@item.Id"
+                           class="btn btn-danger">
+                            <i class="lni lni-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#productTable").DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                },
+                dom: "Bfrtip",
+                buttons: [
+                    {
+                        extend: 'csv',
+                        className: 'bg-info border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2, 3, 4, 5]
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'bg-danger border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2, 3, 4, 5]
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        className: 'bg-success border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2, 3, 4, 5]
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        target: 6,
+                        orderable: false,
+                        searchable: false
+                    }
+                ]
+            })
+        })
+    </script>
+
+    <!-- funcion para mostar los alert -->
+    <script>
+        function showToast(message, gradientColors) {
+            Toastify({
+                text: message,
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, " + gradientColors + ")"
+                }
+            }).showToast();
+        }
+    </script>
+
+    @if (TempData["addProduct"] != null)
+    {
+        <script>
+            showToast("Se agrego correctamente el Producto", "#6ED725, #274412");
+        </script>
+    }
+
+    @if (TempData["editProduct"] != null)
+    {
+        <script>
+            showToast("Se edito correctamente el Producto", "#00b09b, #96c93d");
+        </script>
+    }
+
+    @if (TempData["deleteProduct"] != null)
+    {
+        <script>
+            showToast("Se Elimino correctamente el Producto"", "#ff5500, #ff0000");
+        </script>
+    }
+}
