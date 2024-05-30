@@ -33,9 +33,9 @@ namespace HardwareStore.Services.Email
 
                 var templateContent = File.ReadAllText(templatePath);
 
-                var saleDate = DateTime.Today;
+                var saleDate = DateTime.Now;
 
-                templateContent = templateContent.Replace("@SaleDate", saleDate.ToString());
+                templateContent = templateContent.Replace("@SaleDate", saleDate.ToString("dd/MM/yyyy HH:mm:ss"));
                 templateContent = templateContent.Replace("@CustomerName", data["RecepientName"]);
                 templateContent = templateContent.Replace("@Email", data["EmailTo"]);
                 templateContent = templateContent.Replace("@Address", data["Address"]);
