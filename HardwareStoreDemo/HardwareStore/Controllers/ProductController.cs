@@ -6,6 +6,7 @@ using HardwareStore.Validations;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using MiniExcelLibs;
 
 namespace HardwareStore.Controllers
 {
@@ -17,6 +18,7 @@ namespace HardwareStore.Controllers
         public ProductController(IProductRepository productRepository, IValidator<Product> validator)
         {
             _productRepository = productRepository;
+
             _validator = validator;
         }
 
@@ -25,6 +27,7 @@ namespace HardwareStore.Controllers
         public async Task<ActionResult> Index()
         {
             var products = await _productRepository.GetAllProductAsync();
+
             return View(products);
         }
 
@@ -42,13 +45,9 @@ namespace HardwareStore.Controllers
         // GET: ProductController/Create
         public async Task<ActionResult> Create()
         {
-            var categories = await _productRepository.GetAllCategoryAsync();
-            var suppliers = await _productRepository.GetAllSupplierAsync();
+            await ViewBagLists();
 
-            ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-            ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
-
-            return View(new Product());
+            return View();
         }
 
         // POST: ProductController/Create
@@ -64,11 +63,7 @@ namespace HardwareStore.Controllers
                 {
                     validationResult.AddToModelState(this.ModelState);
 
-                    var categories = await _productRepository.GetAllCategoryAsync();
-                    ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-                    var suppliers = await _productRepository.GetAllSupplierAsync();
-                    ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+                    await ViewBagLists();
 
                     return View(product);
                 }
@@ -78,11 +73,7 @@ namespace HardwareStore.Controllers
                 {
                     ModelState.AddModelError("ProductName", "Ya existe un producto con este nombre.");
 
-                    var categories = await _productRepository.GetAllCategoryAsync();
-                    ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-                    var suppliers = await _productRepository.GetAllSupplierAsync();
-                    ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+                    await ViewBagLists();
 
                     return View(product);
                 }
@@ -95,14 +86,65 @@ namespace HardwareStore.Controllers
             }
             catch
             {
-                var categories = await _productRepository.GetAllCategoryAsync();
-                ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-                var suppliers = await _productRepository.GetAllSupplierAsync();
-                ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+                await ViewBagLists();
 
                 return View(product);
             }
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ImportData()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ImportData(IFormFile file)
+        {
+            var directoryPath = Path.Combine(Directory.GetCurrentDirectory(), "Uploads");
+
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+
+            if (file != null && file.Length > 0)
+            {
+                var fileName = Path.GetFileName(file.FileName);
+
+                var path = Path.Combine(directoryPath, fileName);
+
+                using (var stream = new FileStream(path, FileMode.Create))
+                {
+                    file.CopyTo(stream);
+                }
+
+                using (var stream = System.IO.File.OpenRead(path))
+                {
+                    var rows = stream.Query<Product>();
+
+                    foreach (var row in rows)
+                    {
+                        try
+                        {
+                            await _productRepository.AddProductAsync(row);
+                        } catch (Exception)
+                        {
+                            TempData["message"] = "La importacion Fallo por favor revice que su archivo contenga los campos necesarios";
+
+                            return View();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                TempData["message"] = "El archivo esta Vacio o no se Ingreso!";
+
+                return View();
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
         // GET: ProductController/Edit/5
@@ -113,11 +155,7 @@ namespace HardwareStore.Controllers
             if (product == null)
                 return NotFound();
 
-            var categories = await _productRepository.GetAllCategoryAsync();
-            ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-            var suppliers = await _productRepository.GetAllSupplierAsync();
-            ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+            await ViewBagLists();
 
             return View(product);
         }
@@ -141,11 +179,7 @@ namespace HardwareStore.Controllers
                 {
                     validationResult.AddToModelState(this.ModelState);
 
-                    var categories = await _productRepository.GetAllCategoryAsync();
-                    ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-                    var suppliers = await _productRepository.GetAllSupplierAsync();
-                    ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+                    await ViewBagLists();
 
                     return View(product);
                 }
@@ -155,16 +189,13 @@ namespace HardwareStore.Controllers
                 {
                     ModelState.AddModelError("ProductName", "Ya existe un producto con este nombre.");
 
-                    var categories = await _productRepository.GetAllCategoryAsync();
-                    ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-                    var suppliers = await _productRepository.GetAllSupplierAsync();
-                    ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+                    await ViewBagLists();
 
                     return View(product);
                 }
 
                 await _productRepository.EditProductAsync(product);
+
                 TempData["editProduct"] = "Producto editado con éxito";
 
                 return RedirectToAction(nameof(Index));
@@ -173,17 +204,11 @@ namespace HardwareStore.Controllers
             {
                 ViewBag.Error = ex.Message;
 
-                var categories = await _productRepository.GetAllCategoryAsync();
-                ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
-
-                var suppliers = await _productRepository.GetAllSupplierAsync();
-                ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
+                await ViewBagLists();
 
                 return View(product);
             }
         }
-
-
 
         // GET: ProductController/Delete/5
         public async Task<ActionResult> Delete(int id)
@@ -204,6 +229,7 @@ namespace HardwareStore.Controllers
             try
             {
                 await _productRepository.DeleteProductAsync(product.Id);
+
                 TempData["deleteProduct"] = "Producto eliminado con éxito";
 
                 return RedirectToAction(nameof(Index));
@@ -211,8 +237,18 @@ namespace HardwareStore.Controllers
             catch
             {
                 TempData["message"] = "No se pudo eliminar el producto";
+
                 return RedirectToAction(nameof(Index));
             }
+        }
+
+        private async Task ViewBagLists()
+        {
+            var categories = await _productRepository.GetAllCategoryAsync();
+            ViewBag.Categories = new SelectList(categories, nameof(Category.Id), nameof(Category.CategoryName));
+
+            var suppliers = await _productRepository.GetAllSupplierAsync();
+            ViewBag.Suppliers = new SelectList(suppliers, nameof(Supplier.Id), nameof(Supplier.SupplierName));
         }
     }
 }

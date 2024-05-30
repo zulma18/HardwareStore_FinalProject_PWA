@@ -5,6 +5,7 @@ using HardwareStore.Repositories.Categorys;
 using HardwareStore.Repositories.Clients;
 using HardwareStore.Repositories.Employees;
 using HardwareStore.Repositories.Products;
+using HardwareStore.Repositories.Reports;
 using HardwareStore.Repositories.Sales;
 using HardwareStore.Services.Email;
 using HardwareStore.Validations;
@@ -31,6 +32,8 @@ builder.Services.AddScoped<IClientRepository, ClientRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IReportRepository, ReportRepository>();
+
 // services
 builder.Services.AddScoped<IEmailService, EmailService>();
 

@@ -9,11 +9,11 @@ namespace HardwareStore.Validations
         {
             RuleFor(category => category.CategoryName)
                 .NotNull().WithMessage("El nombre categoria es requerido")
-                .Length(7, 50).WithMessage("El numero de caracteres debe estar entre 7 y 50");
+                .Length(2, 50).WithMessage("El numero de caracteres debe estar entre 2 y 50");
 
             RuleFor(category => category.Description)
                 .NotNull().WithMessage("La descripcion es requerido")
-                .Length(20, 250).WithMessage("El numero de caracteres debe estar entre 20 y 250");
+                .Length(3, 250).WithMessage("El numero de caracteres debe estar entre 3 y 250");
         }
     }
 }

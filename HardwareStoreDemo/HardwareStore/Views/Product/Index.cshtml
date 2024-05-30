@@ -7,8 +7,9 @@
 }
 
 <section class="bg-white container p-4 rounded-2 ">
-    <div class="d-flex justify-content-end mx-5">
-        <a class="btn btn-success mb-2" asp-action="Create" asp-controller="Product">Agregar Producto <i class="lni lni-add-files"></i></a>
+    <div class="d-flex justify-content-end aling-items-center mx-5">
+        <a class="btn btn-success mb-2 mx-1" asp-action="Create" asp-controller="Product">Agregar Producto <i class="lni lni-add-files"></i></a>
+        <a asp-action="ImportData" class="btn btn-primary mb-2">Importar Datos (Excel) <i class="lni lni-upload"></i></a>
     </div>
     @if (TempData["message"] != null)
     {

@@ -113,6 +113,7 @@ namespace HardwareStore.Repositories.Products
                 "spProduct_GetByName",
                 new { ProductName = productName }
             );
+
             return product.Any();
         }
 

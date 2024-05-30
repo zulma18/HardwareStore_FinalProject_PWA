@@ -1,8 +1,135 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
+    ViewData["TitlePage"] = "Reportes de Ventas";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row" style="margin-top:20px">
+    <div class="col-lg-6 bg-white rounded-2 py-3 mb-md-3">
+        <div>
+            <div>
+                <b>Reporte Ventas: Ultimos 4 meses</b>
+            </div>
+            <div>
+                <canvas id="myBarChart" width="100" height="50"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-5 bg-white rounded-2 py-3">
+
+        <div>
+            <div>
+                <b>Reporte Productos: Mas Vendidos Ultimos 3 meses</b>
+            </div>
+            <div>
+                <canvas id="myPieChart" width="100" height="50"></canvas>
+            </div>
+        </div>
+    </div>
 </div>
+
+@section Scripts {
+    <script>
+        $.ajax({
+            url: '@Url.Action("SaleReport", "Home")',
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+                var monthList = [];
+                var quantitySalesList = [];
+
+                for (var i = 0; i < data.length; i++) {
+                    monthList.push(data[i].monthName);
+                    quantitySalesList.push(data[i].quantity);
+                }
+
+                var controlBar1 = document.getElementById("myBarChart");
+
+                var graficoBar1 = new Chart(controlBar1, {
+                    type: 'bar',
+                    data: {
+                        labels: monthList,
+                        datasets: [{
+                            label: "Ventas",
+                            backgroundColor: [
+                                'rgba(255, 205, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(153, 102, 255, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgb(255, 205, 86)',
+                                'rgb(75, 192, 192)',
+                                'rgb(54, 162, 235)',
+                                'rgb(153, 102, 255)'
+                            ],
+                            borderWidth: 1,
+                            data: quantitySalesList,
+                        }],
+                    },
+                    options: {
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: true
+                                }
+                            },
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    display: true
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: true
+                            }
+                        }
+                    }
+                });
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+
+        $.ajax({
+            url: '@Url.Action("ProductReport", "Home")',
+            type: "GET",
+            dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            success: function (data) {
+
+                console.log(data);
+
+                var productList = [];
+                var quantitySoldList = [];
+
+                for (var i = 0; i < data.length; i++) {
+                    productList.push(data[i].productName)
+                    quantitySoldList.push(data[i].quantitySold)
+                }
+
+
+                var controlPie1 = document.getElementById("myPieChart");
+                var graficoPie1 = new Chart(controlPie1, {
+                    type: 'pie',
+                    data: {
+                        labels: productList,
+                        datasets: [{
+                            data: quantitySoldList,
+                            backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+                        }],
+                    },
+                });
+
+            },
+            error: function (error) {
+                console.log(error)
+            }
+        });
+
+    </script>
+}
