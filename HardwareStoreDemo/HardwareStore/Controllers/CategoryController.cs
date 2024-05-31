@@ -40,8 +40,7 @@ namespace HardwareStore.Controllers
         {
             try
             {
-                ValidationResult validationResult =
-                    await _validator.ValidateAsync(category);
+                ValidationResult validationResult = await _validator.ValidateAsync(category);
 
                 if (!validationResult.IsValid)
                 {
@@ -50,6 +49,15 @@ namespace HardwareStore.Controllers
                     return View(category);
                 }
 
+                // Comprobar si ya existe un producto con el mismo nombre
+                if (await _categoryRepository.CategoryNameExistsAsync(category.CategoryName))
+                {
+                    ModelState.AddModelError("CategoryName", "Ya existe una categoria con este nombre.");
+
+                    return View(category);
+                }
+
+                // Agregar el producto si no existe otro con el mismo nombre
                 await _categoryRepository.AddCategoryAsync(category);
 
                 TempData["addCategory"] = "Categoria agregada con exito";

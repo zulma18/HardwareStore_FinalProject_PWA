@@ -51,5 +51,15 @@ namespace HardwareStore.Repositories.Categorys
                 new { Id = id }
                 );
         }
+
+        public async Task<bool> CategoryNameExistsAsync(string categoryName)
+        {
+            var category = await _dataAccess.GetDataAsync<Category, dynamic>(
+                "spCategory_GetByName",
+                new { CategoryName = categoryName }
+            );
+
+            return category.Any();
+        }
     }
 }

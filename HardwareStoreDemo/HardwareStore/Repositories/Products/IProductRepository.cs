@@ -18,7 +18,5 @@ namespace HardwareStore.Repositories.Products
         //met para comprobar si ya existe el prod en el sistm
         Task<bool> ProductNameExistsAsync(string productName); 
 
-        //para no actualizar cn el nm de uno existente
-        Task<bool> ProductNameExistsAsync(string productName, int productId);
     }
 }

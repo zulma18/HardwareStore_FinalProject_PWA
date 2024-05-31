@@ -165,11 +165,6 @@ namespace HardwareStore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(int id, Product product)
         {
-            //No actualiza si hay si ya existe un prod con ese nombre
-            if (id != product.Id)
-            {
-                return BadRequest();
-            }
 
             try
             {
@@ -178,16 +173,6 @@ namespace HardwareStore.Controllers
                 if (!validationResult.IsValid)
                 {
                     validationResult.AddToModelState(this.ModelState);
-
-                    await ViewBagLists();
-
-                    return View(product);
-                }
-
-                // Comprobar si ya existe un producto con el mismo nombre excluyendo el actual
-                if (await _productRepository.ProductNameExistsAsync(product.ProductName, product.Id))
-                {
-                    ModelState.AddModelError("ProductName", "Ya existe un producto con este nombre.");
 
                     await ViewBagLists();
 

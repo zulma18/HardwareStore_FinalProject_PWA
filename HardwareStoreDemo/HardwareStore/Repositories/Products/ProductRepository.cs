@@ -116,14 +116,5 @@ namespace HardwareStore.Repositories.Products
 
             return product.Any();
         }
-
-        public async Task<bool> ProductNameExistsAsync(string productName, int productId)
-        {
-            var products = await _dataAccess.GetDataAsync<Product, dynamic>(
-                "spProduct_GetByNameExcludingId",
-                new { ProductName = productName, ProductId = productId }
-            );
-            return products.Any();
-        }
     }
 }
