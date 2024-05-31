@@ -36,7 +36,7 @@ namespace HardwareStore.Controllers
         {
             var sale = await _saleRepository.GetSaleByIdAsync(id);
 
-            sale.SaleDetails = (ICollection<SaleDetail>)await _saleRepository.GetSaleDetailsByIdAsync(id);
+            sale.SaleDetails = (List<SaleDetail>) await _saleRepository.GetSaleDetailsByIdAsync(id);
 
             return View(sale);
         }

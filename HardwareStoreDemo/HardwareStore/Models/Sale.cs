@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.CodeAnalysis;
 
 namespace HardwareStore.Models
 {
@@ -7,9 +8,11 @@ namespace HardwareStore.Models
         public int Id { get; set; }
 
         [Required (ErrorMessage ="El Cliente es Requerido")]
+        [Display (Name = "Cliente")]
         public int ClientID { get; set; }
 
         [Required(ErrorMessage = "El Empleado es Requerido")]
+        [Display (Name = "Empleado")]
         public int EmployeeID { get; set; }
 
         [Display(Name = "Cliente")]
@@ -30,6 +33,6 @@ namespace HardwareStore.Models
         public decimal Total { get; set; }
 
         [Required(ErrorMessage ="Debe Seleccionar al menos 1 Producto")]
-        public ICollection<SaleDetail> SaleDetails { get; set; }
+        public List<SaleDetail> SaleDetails { get; set; }
     }
 }
