@@ -13,7 +13,7 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="row ">
                 <div class="form-group col-md-6 d-flex flex-column py-3">
-                    <label asp-for="ClientID" class="control-label">Cliente</label>
+                    <label asp-for="ClientID" class="control-label"></label>
                     <select class="form-control d-flex justify-content-center align-items-center client-select" asp-for="ClientID" asp-items="@ViewBag.Clients" id="clientsSearch" required>
                         <option value=""></option>
                     </select>
@@ -24,7 +24,7 @@
                     <span id="currentDate"></span>
                 </div>
                 <div class="form-group col-md-6 d-flex flex-column py-3">
-                    <label asp-for="EmployeeID" class="control-label">Empleado</label>
+                    <label asp-for="EmployeeID" class="control-label"></label>
                     <select class="form-control d-flex justify-content-center align-items-center employee-select" asp-for="EmployeeID" asp-items="@ViewBag.Employees" id="employeesSearch" required>
                         <option value=""></option>
                     </select>
@@ -74,31 +74,22 @@
                         {
                             <tr>
                                 <td style="width:30%;">
-                                    @{
-                                        var selectedProductId = saleDetailsList[i].ProductID.ToString();
-                                    }
                                     <select name="SaleDetails[@i].ProductID" class="form-control product-select" required >
-                                        <option value="">Seleccione un Producto</option>
+                                        <option value="@saleDetailsList[i].ProductID" selected="selected">@saleDetailsList[i].ProductName</option>
                                         @foreach (var product in ViewBag.Products)
                                         {
-                                            if (product.Value == selectedProductId)
-                                            {
-                                                <option value="@saleDetailsList[i].ProductID" selected="selected">@product.Text</option>
-                                            }
+                                             <option value="@product.Value">@product.Text</option>
                                         }
                                     </select>
                                     <input type="text" name="SaleDetails[@i].ProductName" class="form-control d-none" />
                                 </td>
                                 <td style="width:15%;"><input type="number" name="SaleDetails[@i].Quantity" class="form-control text-center" value="@saleDetailsList[i].Quantity" required /></td>
-                                <td class="text-center">
-                                    <span class="productStock">@saleDetailsList[i].Stock</span>
-                                    <input type="number" name="SaleDetails[@i].Stock" class="form-control text-center d-none" />
-                                </td>
+                                <td class="text-center"><span class="productStock">@saleDetailsList[i].Stock</span></td>
                                 <td class="text-center">$ 
-                                    <span class="productPrice">@saleDetailsList[i].UnitPrice</span>
+                                    <span class="productPrice"></span>
                                     <input type="text" name="SaleDetails[@i].UnitPrice" class="form-control text-center d-none" />
                                 </td>
-                                <td class="text-center">$ <span class="totalDetail">@(saleDetailsList[i].UnitPrice * saleDetailsList[i].Quantity)</span></td>
+                                <td class="text-center">$ <span class="totalDetail"></span></td>
                                 <td class="text-center">
                                     <button type="button" class="btn btn-success"><i class="lni lni-shopping-basket"></i></button>
                                     <button type="button" class="btn btn-danger remove-row"><i class="lni lni-trash-can"></i></button>
@@ -189,20 +180,27 @@
                 placeholder: "Seleccione un Empleado",
             });
 
-            // ejecuta la funcion calculateTotalSale si SaleDetails no viene vacio
+            // ejecuta las funciones si SaleDetails no viene vacio (la validacion del modelo fue false)
             @if (Model.SaleDetails != null)
             {
                 <text>
+                    LoadData()
                     calculateTotalSale()
+
+                    $('.product-select').select2({ // agrega select2 a todos los elementos con la clase "product-select"
+                        language: "es",
+                        width: '100%',
+                        placeholder: "Seleccione un Producto"
+                    });
                 </text>
             }
 
             // agrega filas en tabla de productos
             $('#add-row').click(function () {
-                var index = $('#details-table tbody tr').length;
+                var index = $('#details-table tbody tr').length; // se obtiene la longitud o cantidad de filas y se pasan como index cuando se crea una nueva fila para que cada una guarde sus datos individualmente
                 var fila = `<tr>
                                  <td style="width:30%;">
-                                      <select name="SaleDetails[${index}].ProductID" class="form-control product-select" >
+                                      <select name="SaleDetails[${index}].ProductID" class="form-control product-select" required>
                                             <option value="">Seleccione un Producto</option>
                                             @foreach (var product in ViewBag.Products)
                                                 {
@@ -214,10 +212,10 @@
                                  <td style="width:15%;"><input type="number" name="SaleDetails[${index}].Quantity" class="form-control text-center" value="1" required /></td>
                                  <td class="text-center">
                                     <span class="productStock">0</span>
-                                    <input type="number" name="SaleDetails[${index}].Stock" class="form-control text-center d-none" />
                                  </td>
-                                 <td class="text-center">$ <span class="productPrice">0</span>
-                                 <input type="text" name="SaleDetails[${index}].UnitPrice" class="form-control text-center d-none"  />
+                                 <td class="text-center">$ 
+                                    <span class="productPrice">0</span>
+                                    <input type="text" name="SaleDetails[${index}].UnitPrice" class="form-control text-center d-none" />
                                  </td>
                                  <td class="text-center">$ <span class="totalDetail">0</span></td>
                                  <td class="text-center">
@@ -283,10 +281,9 @@
                         success: function (data) {
                             if (data) {
                                 $row.find('.productPrice').text(data.unitPrice);
-                                $row.find('input[name$=".ProductName"]').val(data.productName); // input oculo guarda el nombre del producto para el enviode email
+                                $row.find('input[name$=".ProductName"]').val(data.productName); // input oculo guarda el nombre del producto para el envio del email
                                 $row.find('.productStock').text(data.unitsInStock);
-                                $row.find('input[name$=".Stock"]').val(data.unitsInStock); // input ocultos que sirven solo para mostrar la informacion
-                                $row.find('input[name$=".UnitPrice"]').val(data.unitPrice); // en la vista en caso de un error en el modelo Sale
+                                $row.find('input[name$=".UnitPrice"]').val(data.unitPrice); // input oculto en la vista se usa para el email
                                 var cantidad = parseFloat($row.find('input[name$=".Quantity"]').val()) || 0; 
                                 var total = data.unitPrice * cantidad
                                 $row.find('.totalDetail').text(total.toFixed(2));
@@ -302,7 +299,15 @@
                 }
             }
 
-            
+            // carga nuevamente los datos de los productos en caso que la validacion del modelo falle y se retorne la vista
+            function LoadData() {
+                $('#details-table tbody tr').each(function () {
+                    var $row = $(this);
+                    var productID = $row.find('.product-select').val();
+                    searchProductInfo(productID, $row);
+                });
+            }
+
 
             // VALIDACION DEL FORMULARIO
 
