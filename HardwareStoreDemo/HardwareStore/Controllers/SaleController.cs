@@ -49,18 +49,18 @@ namespace HardwareStore.Controllers
 
         // metodo para la peticion ajax, envia los detalles del producto seleccionado a la vista
         [HttpGet]
-        public async Task<IActionResult> SearchProductById(int id)
+        public async Task<IActionResult> SearchProductById(int id) // recibe el id del producto
         {
             try
             {
-                var product = await _saleRepository.GetProductByIdAsync(id);
+                var product = await _saleRepository.GetProductByIdAsync(id); // busca el productopor id
 
                 if (product == null)
                 {
                     return NotFound();
                 }
 
-                return Json(product);
+                return Json(product); // retorna los datos del producto en formato Json
             }
             catch (Exception ex)
             {
@@ -88,19 +88,18 @@ namespace HardwareStore.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Sale sale)
         {
+            if (sale.SaleDetails == null)
+            {
+                TempData["message"] = "Debe Agregar Almenos 1 Producto";
+
+                await ViewBagLists();
+
+                return View(sale);
+            }
+
             try
             {
-                if (sale.SaleDetails == null)
-                {
-                    TempData["message"] = "Debe Agregar Almenos 1 Producto";
-
-                    await ViewBagLists();
-
-                    return View(sale);
-                }
-
-                ValidationResult validationResult =
-                    await _validator.ValidateAsync(sale);
+                ValidationResult validationResult = await _validator.ValidateAsync(sale);
 
                 if (!validationResult.IsValid)
                 {

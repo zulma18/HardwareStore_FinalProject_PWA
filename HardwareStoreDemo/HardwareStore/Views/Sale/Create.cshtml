@@ -65,7 +65,7 @@
                 </thead>
                 <tbody>
                     <!-- si se envia el formulario y hay un problema con la validacion del modelo 
-                        se recuperan los datos del detalle de venta
+                        se recuperan los datos del detalle de venta (que es una lista) y se itera cada uno
                     -->
                      @if (Model.SaleDetails != null)
                     {
@@ -184,8 +184,8 @@
             @if (Model.SaleDetails != null)
             {
                 <text>
-                    LoadData()
-                    calculateTotalSale()
+                    LoadData() <!-- carga los datos de los productos nuevamente -->
+                    calculateTotalSale() <!-- vuelve a calcular el total de la venta -->
 
                     $('.product-select').select2({ // agrega select2 a todos los elementos con la clase "product-select"
                         language: "es",
@@ -275,11 +275,12 @@
             function searchProductInfo(productID, $row) {
                 if (productID) {
                     $.ajax({
-                        url: '/Sale/SearchProductById',
+                        url: '/Sale/SearchProductById', // hace la peticion al metodo SearchProductById del controlador sale
                         method: 'GET',
-                        data: { id: productID },
-                        success: function (data) {
+                        data: { id: productID }, // aqui envia el id del producto al metodo 
+                        success: function (data) { // data es la informacion del producto que recibimos del metodo en el controlador de sale
                             if (data) {
+                                // se actualizan los datos de la fila con los datos que vienen de la (data)
                                 $row.find('.productPrice').text(data.unitPrice);
                                 $row.find('input[name$=".ProductName"]').val(data.productName); // input oculo guarda el nombre del producto para el envio del email
                                 $row.find('.productStock').text(data.unitsInStock);
@@ -301,10 +302,10 @@
 
             // carga nuevamente los datos de los productos en caso que la validacion del modelo falle y se retorne la vista
             function LoadData() {
-                $('#details-table tbody tr').each(function () {
+                $('#details-table tbody tr').each(function () { // iteramos cada fila
                     var $row = $(this);
-                    var productID = $row.find('.product-select').val();
-                    searchProductInfo(productID, $row);
+                    var productID = $row.find('.product-select').val(); // recuperamos el id del producto en la fila
+                    searchProductInfo(productID, $row); // enviamos el id del producto recuperado junto con la fila
                 });
             }
 
@@ -313,32 +314,33 @@
 
             // evita el envio del fromulario si las cantidades son mayores al Stock o si existen productos duplicados
             $('form').submit(function (event) {
-                var valid = true;
-                $('#details-table tbody tr').each(function () {
+                var valid = true; // esta variable la utilizamos para controlar lo que devuelva la funcion checkQuantity()
+
+                $('#details-table tbody tr').each(function () { // iteramos cada fila
                     var $row = $(this);
-                    var cantidad = parseFloat($row.find('input[name$=".Quantity"]').val()) || 0;
-                    var stock = parseFloat($row.find('.productStock').text()) || 0;
-                    if (!checkQuantity($row, cantidad, stock)) {
-                        valid = false;
+                    var cantidad = parseFloat($row.find('input[name$=".Quantity"]').val()) || 0; // obtenemos el valos de cantidad 
+                    var stock = parseFloat($row.find('.productStock').text()) || 0; // obtenemos el valor del Stock
+                    if (!checkQuantity($row, cantidad, stock)) { // si retorna false la cantidad es mayor al stock
+                        valid = false; // canbiamos la variable a false
                     }
                 });
 
-                if (!checkClientEmployeeId()) {
-                    $('#clientOrEmployeeId').modal('show');
-                    event.preventDefault();
-                }
-
-                if (!valid) {
+                if (!valid) { //  si is valid es false significa que existe una fila con la cantidad mayor al stock y cancela el envio del formulario
                     $('#enoughStock').modal('show');
                     event.preventDefault();
                 }
 
-                if (!checkProduct()) {
+                if (!checkClientEmployeeId()) { // si los select de cliente o empleados estan vacios cancela el envio del formulario
+                    $('#clientOrEmployeeId').modal('show'); // muestra el modal con el mensaje de error
+                    event.preventDefault(); // event.preventDeFault(); evita que se envie el formulario
+                }
+
+                if (!hasProducts()) { // evalua si hay productos agregados, si no los hay (es false) por lo tanto no se envia el formulario
                     event.preventDefault();
                     $('#checkProduct').removeClass('d-none')
                 };
 
-                if (!validateDuplicateProducts()){
+                if (validateDuplicateProducts()){ // evalua que no existan productos repetidos si los hay (true) evita el envio del formulario
                     $('#duplicateProduct').modal('show');
                     event.preventDefault();
                 }
@@ -348,8 +350,8 @@
 
             // valida que la cantidad solicitada no supere el Stock
             function checkQuantity($row, cantidad, stock) {
-                if (cantidad > stock || cantidad <= 0) {
-                    $row.find('input[name$=".Quantity"]').addClass('is-invalid');
+                if (cantidad > stock || cantidad <= 0) { // si la cantidad es mayor al stock o la cantidad es menos o igual 0
+                    $row.find('input[name$=".Quantity"]').addClass('is-invalid'); // agrega una clase al input que lo marca en rojo y retornamos false
                     return false;
                 } else {
                     $row.find('input[name$=".Quantity"]').removeClass('is-invalid');
@@ -359,42 +361,44 @@
 
             // valida que se seleccione el empleado y el cliente
             function checkClientEmployeeId() {
-                var selectedClient = $('#clientsSearch').val();
-                var selectedEmployee = $('#employeesSearch').val();
-                console.log(selectedClient, selectedEmployee);
+                var selectedClient = $('#clientsSearch').val(); // recuperamos el valor del selectList de cliente
+                var selectedEmployee = $('#employeesSearch').val(); // recuperamos el valor del selectList de empleados
+
                 if (selectedClient == null || selectedClient == '' || selectedEmployee == null || selectedEmployee == ''){
-                    return false
+                    return false // si estan vacios retornamos false
                 } else {
                     return true
                 }
             }
 
             // valida que se agrege al menos 1 producto
-            function checkProduct() {
-                return $('#details-table tbody tr').length > 0;
+            function hasProducts() {
+                return $('#details-table tbody tr').length > 0; // si la longitud es mayor a cero retorna true (hay al menos un producto) si no false (no hay productos)
             }
 
             // valida que no hay productos repetidos
             function validateDuplicateProducts() {
-                var products = [];
+                var products = []; // aqui guardamos los id de los productos
                 var hasDuplicates = false;
 
-                if ($('#details-table tbody tr').length === 0) {    // si no existen filas no hay duplicados
+                if ($('#details-table tbody tr').length === 0) { // si no existen filas no hay duplicados
                     return true;
                 }
 
-                $('#details-table tbody tr').each(function () {
+                $('#details-table tbody tr').each(function () { // iteramos cada fila de la tabla
                     var $row = $(this);
-                    var productID = $row.find('.product-select').val();
-                    if (products.includes(productID)) {
-                        $row.addClass('bg-danger'); 
-                        hasDuplicates = true;
+                    var productID = $row.find('.product-select').val(); // recuperamos el id del producto (selectList de productos)
+                    if (products.includes(productID)) { // evaluamos que si la lista ya incluye este id signofica que el producto esta repetido
+                        $row.addClass('bg-danger');  // agrega una clase a la fila que la pinta en rojo
+                        hasDuplicates = true; // cambiamos la variable a true
                     } else {
-                        $row.removeClass('bg-danger');  
-                        products.push(productID);
+                        $row.removeClass('bg-danger');  // remueve la clase del fondo rojo de la fila
+                        products.push(productID); // agrega el id a la lista
                     }
                 });
-                return !hasDuplicates;
+                // si la variable llega hasta aqui como false (no se encontraron productos repetidos)
+                // si llega hasta aqui como true (hay productos repetidos)
+                return hasDuplicates; 
             }
         });
 

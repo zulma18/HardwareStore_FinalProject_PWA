@@ -48,6 +48,8 @@ namespace HardwareStore.Data
             using IDbConnection dbConnection = new SqlConnection(_configuration.GetConnectionString(connection));
 
             var p = new DynamicParameters(parameters);
+            // aqui con p.Add solo agregamos un nuevo parametro "SaleID" que es de tipo entero y se le asignara el valor Output
+            // (que viene de salida del proceso almacenado)
             p.Add("SaleID", DbType.Int32, direction: ParameterDirection.Output);
 
             await dbConnection.ExecuteAsync(storedProcedure, p, commandType: CommandType.StoredProcedure);
