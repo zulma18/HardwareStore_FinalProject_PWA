@@ -24,6 +24,7 @@ builder.Services.AddScoped<IValidator<Sale>, SaleValidator>();
 builder.Services.AddScoped<IValidator<Category>, CategoryValidator>();
 builder.Services.AddScoped<IValidator<Client>, ClientValidator>();
 builder.Services.AddScoped<IValidator<Product>, ProductValidator>();
+builder.Services.AddScoped<IValidator<Supplier>, SupplierValidator>();
 
 
 // repositories
@@ -33,6 +34,7 @@ builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IReportRepository, ReportRepository>();
+builder.Services.AddScoped<ISupplierRepository, SupplierRepository>();
 
 // services
 builder.Services.AddScoped<IEmailService, EmailService>();

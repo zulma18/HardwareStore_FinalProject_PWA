@@ -15,7 +15,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     }
-    <table class="table table-reponsive table-bordered table-striped mt-2 w-100" id="clientTable">
+    <table class="table table-reponsive table-bordered table-striped mt-2 w-100" id="supplierTable">
         <thead class="text-center bg-secondary text-white">
             <tr>
                 <th>
@@ -113,27 +113,27 @@
                         extend: 'csv',
                         className: 'bg-info border-0 text-white',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5]
                         }
                     },
                     {
                         extend: 'pdf',
                         className: 'bg-danger border-0 text-white',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5]
                         }
                     },
                     {
                         extend: 'excel',
                         className: 'bg-success border-0 text-white',
                         exportOptions: {
-                            columns: [1, 2, 3, 4, 5, 6]
+                            columns: [1, 2, 3, 4, 5]
                         }
                     }
                 ],
                 columnDefs: [
                     {
-                        target: 7,
+                        target: 6,
                         orderable: false,
                         searchable: false
                     }
@@ -167,7 +167,7 @@
         </script>
     }
 
-    @if (TempData["editCSupplier"] != null)
+    @if (TempData["editSupplier"] != null)
     {
         <script>
             showToast("Se edito correctamente el proveedor", "#00b09b, #96c93d");
