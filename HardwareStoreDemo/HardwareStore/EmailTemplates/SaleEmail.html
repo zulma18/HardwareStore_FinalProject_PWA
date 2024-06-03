@@ -13,7 +13,8 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 800px;
+            min-width: 500px;
             margin: 0 auto;
             background-color: #ffffff;
             padding: 20px;
@@ -23,6 +24,7 @@
 
         h1 {
             color: #333333;
+            margin: 5px auto;
         }
 
         h2 {
@@ -52,9 +54,9 @@
             border-radius: 5px;
         }
 
-            .button:hover {
-                background-color: #0056b3;
-            }
+        .button:hover {
+            background-color: #0056b3;
+        }
 
         table {
             width: 100%;
@@ -62,33 +64,50 @@
             margin-top: 20px;
         }
 
-            table thead {
-                background-color: #333;
-                color: #ffffff;
-            }
+        table thead {
+            background-color: #333;
+            color: #ffffff;
+        }
 
-                table thead th {
-                    padding: 10px;
-                }
+        table thead th {
+            padding: 10px;
+        }
 
-            table tbody tr {
-                border-bottom: 1px solid #dddddd;
-            }
+        table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
 
-            table tbody td {
-                padding: 10px;
-                text-align: center;
-            }
+        table tbody td {
+            padding: 10px;
+            text-align: center;
+        }
 
-            table tbody tr:last-child {
-                border-bottom: none;
-            }
+        table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        header {
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            margin-bottom:10px;
+        }
+
+        header img {
+            width:190px;
+            height:140px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¡Gracias por tu compra!</h1>
-        <p>Tu compra se procesó con éxito.</p>
+        <header>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2C18V-4nLP56q8XuDzvZpXAS3qB0qkrdY9Q&s" />
+            <h1>¡Gracias por tu compra!</h1>
+            <p>Tu compra se procesó con éxito.</p>
+        </header>
 
         <h2>Información de Cliente</h2>
         <p><strong>Nombre:</strong> @CustomerName</p>
