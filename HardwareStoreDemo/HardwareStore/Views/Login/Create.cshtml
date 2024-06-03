@@ -1,0 +1,73 @@
+﻿@model HardwareStore.Models.Logins_Model
+
+@{
+    ViewData["Title"] = "Create";
+    ViewData["TitlePage"] = "Agregar administrador";
+
+}
+
+<section class="bg-white py-3 px-4 container rounded-2" style="max-width:800px;">
+    <h4 class="pt-2">Ingrese los Datos del Producto</h4>
+
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <hr />
+    <div class="row px-md-3">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="LoginUser" class="control-label"></label>
+                    <input asp-for="LoginUser" class="form-control" />
+                    <span asp-validation-for="LoginUser" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="LoginPassword" class="control-label"></label>
+                    <input asp-for="LoginPassword" class="form-control" />
+                    <span asp-validation-for="LoginPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Id_Rol" class="control-label"></label>
+                    <select asp-items="@ViewBag.Rol" asp-for="Id_Rol" class="form-select" id="rolSearch">
+                        <option value="">Seleccione</option>
+                    </select>
+                    <span asp-validation-for="Id_Rol" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Guardar <i class="lni lni-save"></i></button>
+                    <a class="btn btn-primary" asp-action="Index">Volver a la lista <i class="lni lni-arrow-left"></i></a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</section>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            $('#categorySearch').select2({
+                width: '100%',
+                placeholder: "Seleccione una Categoria ",
+            });
+
+            $('#supplierSearch').select2({
+                width: '100%',
+                placeholder: "Seleccione un Proveedor",
+            });
+        });
+    </script>
+}
+

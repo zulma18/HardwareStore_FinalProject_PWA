@@ -30,22 +30,9 @@
                             </div>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
-                            <li>
-                                <div class="author-info flex items-center !p-1">
-                                    <div class="image">
-                                        <img src="~/images/profile/profile-image.png" alt="image">
-                                    </div>
-                                </div>
-                            </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="#0">
-                                    <i class="lni lni-user"></i> Ver Perfil
-                                </a>
-                            </li>
-                            <li class="divider"></li>
-                            <li>
-                                <a href="#0"> <i class="lni lni-exit"></i> Cerrar sesion </a>
+                                <a asp-area="" asp-controller="Login" asp-action="Logout"><i class="lni lni-exit"></i> Cerrar sesion</a>
                             </li>
                         </ul>
                     </div>

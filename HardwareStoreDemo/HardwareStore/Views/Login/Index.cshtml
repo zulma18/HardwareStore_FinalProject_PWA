@@ -1,0 +1,174 @@
+﻿@model IEnumerable<HardwareStore.Models.Logins_Model>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["TitlePage"] = "Lista de administradores";
+
+}
+
+<section class="bg-white container p-4 rounded-2 ">
+    <div class="d-flex justify-content-end aling-items-center mx-5">
+        <a class="btn btn-success mb-2 mx-1" asp-action="Create" asp-controller="Login">Agregar administrador <i class="lni lni-add-files"></i></a>
+        <a asp-action="ImportData" class="btn btn-primary mb-2">Importar Datos (Excel) <i class="lni lni-upload"></i></a>
+    </div>
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            @TempData["message"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    }
+    <table class="table table-reponsive table-bordered table-striped mt-2 w-100" id="loginTable">
+        <thead class="text-center bg-secondary text-white">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoginId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.LoginUser)
+                </th>
+                <td>
+                    @Html.DisplayNameFor(model => model.LoginPassword)
+                </td>
+                <th>
+                    Rol
+                </th>
+                <th style="width:10%;">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LoginId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LoginUser)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LoginPassword)
+                    </td>
+                    <td>
+                        @item.Roles?.Name_Rol
+                    </td>
+
+                    <td class="text-center">
+                        <a asp-controller="Login"
+                           asp-action="Edit"
+                           asp-route-id="@item.LoginId"
+                           class="btn btn-warning">
+                            <i class="lni lni-pencil-alt"></i>
+                        </a>
+                        <a asp-controller="Login"
+                           asp-action="Delete"
+                           asp-route-id="@item.LoginId"
+                           class="btn btn-danger">
+                            <i class="lni lni-trash-can"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</section>
+
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $("#loginTable").DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                },
+                dom: "Bfrtip",
+                buttons: [
+                    {
+                        extend: 'csv',
+                        className: 'bg-info border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2, 3]
+                        }
+                    },
+                    {
+                        extend: 'pdf',
+                        className: 'bg-danger border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2, 3]
+                        }
+                    },
+                    {
+                        extend: 'excel',
+                        className: 'bg-success border-0 text-white',
+                        exportOptions: {
+                            columns: [1, 2, 3]
+                        }
+                    }
+                ],
+                columnDefs: [
+                    {
+                        target: 4,
+                        orderable: false,
+                        searchable: false
+                    }
+                ]
+            })
+        })
+    </script>
+
+    <!-- funcion para mostar los alert -->
+    <script>
+        function showToast(message, gradientColors) {
+            Toastify({
+                text: message,
+                duration: 3000,
+                newWindow: true,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "linear-gradient(to right, " + gradientColors + ")"
+                }
+            }).showToast();
+        }
+    </script>
+
+    @if (TempData["addLogin"] != null)
+    {
+        <script>
+            showToast("Se agrego correctamente el administrador", "#6ED725, #274412");
+        </script>
+    }
+
+    @if (TempData["editLogin"] != null)
+    {
+        <script>
+            showToast("Se edito correctamente el administrador", "#00b09b, #96c93d");
+        </script>
+    }
+
+    @if (TempData["deleteLogin"] != null)
+    {
+        <script>
+            showToast("Se Elimino correctamente el administrador"", "#ff5500, #ff0000");
+        </script>
+    }
+}
